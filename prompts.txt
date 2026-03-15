@@ -1,0 +1,95 @@
+I inspected https://ekantipur.com manually using browser DevTools before writing the scraper.
+Manual inspection process (Mac):
+1. Opened the site in the browser.
+2. Opened DevTools using Option + Command + I.
+3. Enabled element inspector using Command + Shift + C.
+4. Hovered over elements to identify their HTML structure.
+5. Used Command + F in DevTools to search for specific text like "मनोरञ्जन" and "कार्टुन".
+6. Recorded all selectors in a file called notes.txt.
+Selectors I observed:
+Entertainment section:URL: https://ekantipur.com/entertainmentNavigation link text: "मनोरञ्जन"Selector: a[href="https://ekantipur.com/entertainment"]
+Entertainment article structure:Main wrapper: div.category-main-wrapperArticles container: div.category-wrapperArticle card: div.category
+Inside each article card:
+* Title: div.category h2
+* Article link: div.category h2 a
+* Image: div.category img
+* Author: div.category span.author (may not always exist)
+Cartoon section on homepage:Container: section.e-sectionHeading link: section.e-section h4 aCartoon slider container: section.e-section .cartoon-slider
+Cartoon page:URL: https://ekantipur.com/cartoon
+Cartoon structure:
+* Cartoon image: img inside the main cartoon article
+* Title: img alt attribute or caption text
+* Author: text near the cartoon image or caption (if available)
+Using these selectors, help implement Playwright scraping logic in Python to:
+1. Extract the top 5 entertainment news articles
+2. Extract the cartoon of the day
+3. Save results in output.json with fields:title, image_url, category, author
+Use semantic selectors, proper error handling, and UTF‑8 support for Nepali text.
+
+Task 1: Project SetupProject Name: ekantipurscraper
+Objective: Automate extraction of structured data from ekantipur.com using Python and Playwright.
+Create a Python Playwright script skeleton named scraper.py for ekantipurscraper.
+Requirements:
+* Include imports
+* Browser/page setup
+* headless=False
+* main() function
+* JSON output structure
+* Add comments sections for:
+    * Task 1 (Entertainment News)
+    * Task 2 (Cartoon of the Day)
+
+Task 2: Add scraping logic for Entertainment News (मनोरञ्जन)
+Steps:
+* Navigate to https://ekantipur.com/entertainment
+* Wait for dynamic content using:
+    * wait_for_load_state("networkidle")
+    * wait_for_selector("div.category")
+Extract the top 5 articles:
+Fields:
+* title → div.category h2
+* image_url → div.category img (if exists, otherwise null)
+* category → "मनोरञ्जन"
+* author → div.category span.author (or null if missing)
+Requirements:
+* Wrap extraction in try/except
+* Add meaningful comments
+* Append results to output.json
+
+Task 3: Add scraping logic for Cartoon of the Day (कार्टुन)
+Steps:
+* Navigate to https://ekantipur.com/cartoon
+* Wait for:
+    * wait_for_load_state("networkidle")
+    * wait_for_selector("img")
+Extract:
+* title → img alt attribute OR caption text
+* image_url → first real cartoon image (skip logos/icons)
+* author → cartoonist name if available
+Requirements:
+* Wrap extraction in try/except
+* Add comments explaining each step
+* Save/update output.json
+* Use:ensure_ascii=Falseencoding="utf-8"
+
+Task 4: Verify Script Runs
+Run the scraper using the following command:
+
+uv run python scraper.py
+
+Then verify the following:
+* The script runs without errors using uv run python scraper.py.
+* output.json is created successfully.
+* output.json contains valid JSON with proper UTF‑8 encoding and ensure_ascii=False.
+* All 5 entertainment articles are extracted with complete data:
+    * title
+    * image_url
+    * category
+    * author
+* The Cartoon of the Day object exists and contains:
+    * title
+    * image_url
+    * author
+* The code includes meaningful comments explaining each step.
+* There is no hardcoded data — all values come directly from scraping the website.
+* If any field is missing on the webpage, the script safely stores null instead of failing.
