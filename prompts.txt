@@ -93,3 +93,17 @@ Then verify the following:
 * The code includes meaningful comments explaining each step.
 * There is no hardcoded data — all values come directly from scraping the website.
 * If any field is missing on the webpage, the script safely stores null instead of failing.
+
+Task 5: Debugging and Understanding Playwright
+Objective: Add debugging capabilities to the scraper and ensure proper understanding of Playwright APIs.
+Instructions for the AI tool:
+Include debugging statements in the scraper to verify element selection and page content.
+Print the number of article cards or elements found for each section to confirm correct selectors.
+Print or log the HTML structure of key elements to inspect their structure before extracting data.
+Check if a selector exists before attempting to extract data, and log a meaningful message.
+Pause the script execution at critical points to allow manual inspection using Playwright Inspector.
+Capture screenshots at important steps to visually verify the page content and loaded elements.
+Include comments explaining each debugging step and why it’s useful.
+Encourage the AI to refer to the official Playwright documentation for proper usage of functions like query_selector, query_selector_all, wait_for_selector, wait_for_load_state, and page.pause().
+Ensure debugging tools do not break the main scraping logic and that they are safe to remove or disable in the final run.
+Maintain UTF‑8 encoding and support Nepali text in all outputs.
