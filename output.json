@@ -1,0 +1,40 @@
+{
+  "entertainment": [
+    {
+      "title": "६१ वर्षका भए आमिर खान",
+      "image_url": "https://assets-cdn-api.ekantipur.com/thumb.php?src=https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2026/third-party/aamir-khan-1432026091532-1000x0.jpg&w=701&h=0",
+      "category": "मनोरञ्जन",
+      "author": null
+    },
+    {
+      "title": "राम गोपाल वर्माले गरे ‘सरकार ४’ को घोषणा",
+      "image_url": "https://assets-cdn-api.ekantipur.com/thumb.php?src=https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2026/third-party/sarkar-1432026085833-1000x0.jpg&w=701&h=0",
+      "category": "मनोरञ्जन",
+      "author": null
+    },
+    {
+      "title": "मण्डलामा नाटक ‘चरणदास चोर’ [तस्बिरहरु]",
+      "image_url": null,
+      "category": "मनोरञ्जन",
+      "author": null
+    },
+    {
+      "title": "‘राम नाम सत्य’को टिजर सार्वजनिक",
+      "image_url": null,
+      "category": "मनोरञ्जन",
+      "author": null
+    },
+    {
+      "title": "भक्तपुर फिल्म महोत्सव हुँदै",
+      "image_url": null,
+      "category": "मनोरञ्जन",
+      "author": null
+    }
+  ],
+  "cartoon_of_the_day": {
+    "title": "कान्तिपुरमा आज प्रकाशित अविनको कार्टुन",
+    "image_url": "https://assets-cdn-api.ekantipur.com/thumb.php?src=https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2022/third-party/gajab-chha-ba-821201-1532026014043-1000x0.jpg&w=601&h=0",
+    "category": "कार्टुन",
+    "author": null
+  }
+}

@@ -1,0 +1,18 @@
+Entertainment Navigation Link
+Selector: a[href="https://ekantipur.com/entertainment"]
+Text: "मनोरञ्जन"
+Location: header > .bottom-nav-wrap
+
+Entertainment Page Articles
+Main wrapper: div.category-main-wrapper
+Articles container: div.category-wrapper
+Article card: div.category
+Title: div.category h2
+Article link: div.category h2 a
+Image: div.category img
+Author: div.category span.author
+
+Cartoon Section
+Container: section.e-section
+Link to cartoon page: section.e-section h4 a
+Cartoon images: section.e-section .cartoon-slider img
